@@ -1,31 +1,22 @@
 ﻿#include <iostream>
-
+#include "fieldgen.h"
 using namespace std;
 
-const int SizeXI = 15;
-const int SizeYI = 15;
-int MatrixI[SizeXI][SizeYI];
 
-void FieldMatrixC(int Matrix[SizeXI][SizeYI])
-{
-    for (int i = 0; i <= SizeXI; i++)
-    {
-        for (int j = 0; j <= SizeYI; j++)
-        {
-            Matrix[i][j] = j;
-            //cout << Matrix[i][j];
-        }
-        //cout << "\n";
-    }
-}
-
+const int fieldsize = 10;
+const int mineCount = 25;
 
 int main()
-{
+{    
     
-    FieldMatrixC(MatrixI);
-    
-    
-
+    vector<vector<string>> Field = ToGen(fieldsize, mineCount);
+    for (int i = 0; i < fieldsize; i++)
+    {
+        for (int j = 0; j < fieldsize; j++)
+        {
+            cout << Field[i][j];
+        }
+        cout << "\n";
+    }
 }
 

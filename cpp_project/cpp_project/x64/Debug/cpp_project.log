@@ -1,2 +1,3 @@
 ﻿  cpp_project.cpp
+D:\projects\project\Project_dev_name_cpp\cpp_project\cpp_project\fieldgen.h(11,15): warning C4244: аргумент: преобразование "time_t" в "unsigned int", возможна потеря данных
   cpp_project.vcxproj -> D:\projects\project\Project_dev_name_cpp\cpp_project\x64\Debug\cpp_project.exe

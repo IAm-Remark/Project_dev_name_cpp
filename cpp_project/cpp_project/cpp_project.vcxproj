@@ -129,6 +129,9 @@
   <ItemGroup>
     <ClCompile Include="cpp_project.cpp" />
   </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="FieldGen.h" />
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>
