@@ -73,8 +73,30 @@ vector<vector<string>> ToGen(const int x, const int m)
             }
         }
     }
-
-
     //cout << currentMine;
 	return NewField;
+}
+
+vector<vector<string>> ToGenBlank(const int x)
+{
+
+    int size = x + 1;
+    vector<vector<string>> NewFieldBlank(size, vector<string>(size, "N"));
+    vector<string> Alphabet = {" ", "A", "B", "C", "D", "E", 
+                                "F", "G", "H", "I", "J", "K", 
+                                "L", "M", "N", "O", "P", "Q", 
+                                "R", "S", "T", "U", "V", "W", 
+                                "X", "Y", "Z" };
+    for (int i = 0; i < size; i++ )
+    {
+        for (int j = 0; j < size; j++)
+        {
+            if (i == 0) NewFieldBlank[i][j] = Alphabet[j];
+        }
+        if(i != 0) NewFieldBlank[i][0] = to_string(i - 1);
+    }
+
+    NewFieldBlank[0][0] = " ";
+    return NewFieldBlank;
+
 }
